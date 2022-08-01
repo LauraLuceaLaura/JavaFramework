@@ -1,5 +1,6 @@
 package OOP_Mostenire;
 
+import javax.swing.*;
 import java.util.HashMap;
 import java.util.List;
 
@@ -18,6 +19,14 @@ public class Audi extends Masina {
         this.dotariExterioare = dotariExterioare;
         this.dotariInterioare = dotariInterioare;
     }
+
+
+    public void folosireVolan()
+    {
+        System.out.println("Volanul lui Audi este super.");
+        super.folosireVolan();
+    }
+
 
     public void pretStandard()
     {
@@ -103,4 +112,33 @@ public class Audi extends Masina {
     public void setDotariInterioare(List<String> dotariInterioare) {
         this.dotariInterioare = dotariInterioare;
     }
+
+    //polimorfism static
+    public void numarPasageri(Integer numar)
+    {
+        System.out.println(numar);
+    }
+
+    public void numarPasageri(String numar)
+    {
+        System.out.println(numar);
+    }
+
+    public void numarPasageri(Integer numar, Integer numarAnimale)
+    {
+        System.out.println(numar);
+    }
+
+    public Integer proba()
+    {
+
+        return 1;
+    }
+
+    public Integer proba(Integer x)
+    {
+
+        return 2;
+    }
+
 }

@@ -4,6 +4,10 @@ public class Masina {
 
     //in Java putem sa mostenim numa o singura clasa
 
+    //Polimorfismul e de 2 feluri : static (overload) si dinamic (override)
+    //dinamic = intr-o ierarhie de clase, o metoda poate avea implementari diferite
+    //static = putem avea mai multe metode cu acelasi nume care sa se diferentieze prin numarul/tipul de parametrii
+
     private String marca;
     private String model;
     private Integer numarRoti;
@@ -25,6 +29,12 @@ public class Masina {
         System.out.println("Numarul rotilor este " + numarRoti);
         System.out.println("Transmisia este de tip " + transmisie);
         System.out.println("Motorul are capacitatea cilindrica " + motor);
+    }
+
+    //polimorfism dinamic
+    public void folosireVolan()
+    {
+        System.out.println("Volanul masinii se conduce foarte bine.");
     }
 
     public String getMarca() {

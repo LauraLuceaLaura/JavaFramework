@@ -26,7 +26,11 @@ public class MostenireTest {
         a5.adaugareDotariExterioare();
         a5.adaugareDotariInterioare();
         a5.configuratieAudi();
-
+        a5.folosireVolan();
+        a5.numarPasageri(5);
+        a5.numarPasageri("4 pasageri");
+        a5.numarPasageri(3, 2);
+        a5.proba();
     }
 
 }
