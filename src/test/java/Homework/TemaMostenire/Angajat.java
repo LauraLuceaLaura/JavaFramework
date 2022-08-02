@@ -9,15 +9,14 @@ public class Angajat extends Persoana{
     private Double salariu;
     private Integer zileLucrate;
 
-    //public Integer bonuri = calculBonuriMasa(zileLucrate);
-
     public Angajat(String cnp, String nume, String prenume, Integer varsta, String numarTelefon, Boolean fumator,
-                   String functie, Integer vechime, Double salariu) {
+                   String functie, Integer vechime, Double salariu, Integer zileLucrate) {
         super(cnp, nume, prenume, varsta, numarTelefon, fumator);
 
         this.functie = functie;
         this.vechime = vechime;
         this.salariu = salariu;
+        this.zileLucrate = zileLucrate;
     }
 
     public Double getSalariu() {
@@ -26,6 +25,10 @@ public class Angajat extends Persoana{
 
     public Integer getZileLucrate() {
         return zileLucrate;
+    }
+
+    public void setZileLucrate(Integer zileLucrate) {
+        this.zileLucrate = zileLucrate;
     }
 
     public void infoAngajat()
@@ -57,11 +60,11 @@ public class Angajat extends Persoana{
         return bonuri;
     }
 
-//    public Double venituriTotale()
-//    {
-//        Double venituriTotaleSalariu = getSalariu() + bonuri ;
-//        System.out.println("Venituri totale de:" + venituriTotaleSalariu + "lei");
-//        return venituriTotaleSalariu;
-//    }
-
+    public Double venituriTotale()
+    {
+        Integer bonuri = calculBonuriMasa(getZileLucrate());
+        Double venituriTotaleSalariu = getSalariu() + bonuri ;
+        System.out.println("Venituri totale de:" + venituriTotaleSalariu + "lei");
+        return venituriTotaleSalariu;
+    }
 }

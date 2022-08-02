@@ -1,7 +1,6 @@
-package Homework.TemaStructuriAlternative;
+package Homework.TemaStructuriAlternativeSIPolimorfism;
 
 import org.junit.Test;
-import org.openqa.selenium.json.JsonOutput;
 
 public class ReduceriTelefoane {
 
@@ -51,14 +50,62 @@ public class ReduceriTelefoane {
         }
     }
 
+    public void husa( String husa , Double pretHusa)
+    {
+        switch (husa)
+        {
+            case "neagra":
+                System.out.println("Husa neagra costa " + pretHusa + " lei.");
+                break;
+            case "rosie" :
+                System.out.println("Husa rosie costa " + pretHusa + " lei.");
+                break;
+            case "alba" :
+                System.out.println("Husa alba costa " + pretHusa + " lei.");
+                break;
+            case "albastra" :
+                System.out.println("Husa albastra costa " + pretHusa + " lei.");
+                break;
+            case "verde" :
+                System.out.println("Husa verde costa " + pretHusa + " lei.");
+                break;
+            default:
+                System.out.println("Telefonul nu are husa aleasa.");
+        }
+    }
+
+    public void husa(String model)
+    {
+        switch (model)
+        {
+            case "flori":
+                System.out.println("Ai ales modelul cu " + model + " .");
+                break;
+            case "buline":
+                System.out.println("Ai ales modelul cu " + model + " .");
+                break;
+            case "marbel":
+                System.out.println("Ai ales modelul cu " + model + " .");
+                break;
+            case "matefiata":
+                System.out.println("Ai ales modelul : " + model + " .");
+                break;
+            default:
+                System.out.println("Nu ai ales un model disponibil.");
+        }
+    }
+
     @Test
     public void afisareTelefoane()
     {
-        afisarePreturiNoi("Samsung");
-        afisarePreturiNoi("Huawei");
+//        afisarePreturiNoi("Samsung");
+//        afisarePreturiNoi("Huawei");
         afisarePreturiNoi("Apple");
-        afisarePreturiNoi("Nokia");
-        afisarePreturiNoi("Xiaomi");
+        husa("neagra" , 89.99);
+        husa("matefiata");
+        husa("dungi");
+//        afisarePreturiNoi("Nokia");
+//        afisarePreturiNoi("Xiaomi");
     }
 
 }
