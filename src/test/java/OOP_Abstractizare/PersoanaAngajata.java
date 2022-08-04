@@ -17,6 +17,4 @@ public class PersoanaAngajata extends PersoanaInterface implements  InterfaceAng
         System.out.println("Angajatul " + getNume() + " " + getPrenume() + "primeste 1500 lei.");
     }
 
-
-
 }
