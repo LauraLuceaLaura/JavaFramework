@@ -79,11 +79,7 @@ public class ReduceriTelefoane {
         switch (model)
         {
             case "flori":
-                System.out.println("Ai ales modelul cu " + model + " .");
-                break;
             case "buline":
-                System.out.println("Ai ales modelul cu " + model + " .");
-                break;
             case "marbel":
                 System.out.println("Ai ales modelul cu " + model + " .");
                 break;
